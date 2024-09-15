@@ -5,13 +5,15 @@ Play now on [Steam](https://store.steampowered.com/app/1993830/ROTA/) or [itch.i
 
 ![main_capsule](media/image/assets/main_capsule.png)
 
-# License
-The [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html) is a free, copyleft license for software and other kinds of works. See [LICENSE](LICENSE) for more information. This license does not include the addons/ folder.
+## License
+The [Unlicense](https://unlicense.org/). See [LICENSE](LICENSE) for more information.
 
-# Steam
+This license does not include the addons/ folder.
+
+## Steam
 Using [Godot-Steam-API](https://github.com/samsface/godot-steam-api) by [samsface](https://github.com/samsface/)! (:
 
-# Screenshots
+## Screenshots
 ![shot1](media/image/assets/screens/thumb/1.png)
 ![shot2](media/image/assets/screens/thumb/2.png)
 ![shot3](media/image/assets/screens/thumb/3.png)
