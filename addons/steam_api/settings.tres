@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-disable = false
+disable = true
 app_id = "1993830"
 sdk_dir = "C:\\Apps\\steamworks_sdk_160"

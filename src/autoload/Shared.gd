@@ -123,6 +123,7 @@ var shadow_enabled := 1 setget set_shadow_enabled
 var shadow_buffer := 2 setget set_shadow_buffer
 var is_weather := true setget set_is_weather
 var is_interpolate := true setget set_is_interpolate
+var is_touch := false setget set_is_touch
 
 var is_demo := false
 
@@ -173,6 +174,7 @@ func _ready():
 	set_shadow_buffer()
 	set_is_weather()
 	set_is_interpolate()
+	set_is_touch()
 
 func _input(event):
 	if event is InputEventKey and event.pressed and !event.is_echo():
@@ -463,6 +465,10 @@ func set_is_weather(arg := is_weather):
 
 func set_is_interpolate(arg := is_interpolate):
 	is_interpolate = bool(arg)
+
+func set_is_touch(arg := is_touch):
+	is_touch = bool(arg)
+	TouchScreen.visible = is_touch
 
 func set_clock_alpha(arg := clock_alpha):
 	clock_alpha = clamp(arg, 0, 1)

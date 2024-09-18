@@ -178,7 +178,8 @@ MenuRemap="*res://src/menu/options/MenuRemap.tscn"
 MenuMakeover="*res://src/menu/MenuMakeover.tscn"
 Audio="*res://src/autoload/Audio.tscn"
 Clouds="*res://src/autoload/Clouds.tscn"
-Steam="*res://addons/steam_api/steam.gd"
+TouchScreen="*res://src/autoload/touch_screen.tscn"
+Steam="*res://addons/steam_api/steam_i.gd"
 
 [display]
 

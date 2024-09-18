@@ -16,7 +16,7 @@ func fill_items():
 	.fill_items()
 
 func row():
-	is_audio_joy = cursor > 4
+	is_audio_joy = cursor == 2 or cursor > 5
 
 func close():
 	Shared.save_options()
