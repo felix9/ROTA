@@ -29,8 +29,8 @@ func show_keys(arg_arrows := true, arg_c := true, arg_x := true, arg_pause := fa
 func set_game(arg := false):
 	var i = "" if arg else "ui_"
 	set_actions(i + "up", i + "down", i + "left", i + "right")
-	buttons[0].action = "action" if arg else "ui_no"
-	buttons[1].action = "jump" if arg else "ui_yes"
+	buttons[0].action = "action" if arg else "ui_cancel"
+	buttons[1].action = "jump" if arg else "ui_accept"
 	for f in buttons:
 		f.passby_press = arg
 
