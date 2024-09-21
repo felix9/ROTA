@@ -28,12 +28,14 @@ func open():
 		player.is_input = false
 		palette = Shared.player.palette
 		match_player()
+	TouchScreen.set_game(false)
 
 func close():
 	Cam.turn_offset = Vector2.ZERO
 	Cam.start_zoom(0)
 	
 	player.is_input = true
+	TouchScreen.set_game(true)
 
 func accept():
 	match items[cursor].name.to_lower():

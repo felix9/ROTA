@@ -45,6 +45,7 @@ func set_open(arg := is_open, is_audio := true):
 	
 	#get_tree().paused = is_open
 	Cam.turn_offset = Vector2(400 if is_open else 0, 0) * (1 if randf() > 0.5 else -1) * Cam.zoom.x
+	TouchScreen.set_game(!is_open)
 	
 	# setup items
 	if is_open:

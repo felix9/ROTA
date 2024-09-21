@@ -6,7 +6,7 @@
 [ext_resource path="res://media/font/mini-wakuwaku.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://src/class/shape/Circle.gd" type="Script" id=8]
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 7.07107, 7.07107, 9.2388, 3.82683, 10, 0, 9.2388, -3.82683, 7.07107, -7.07107, 353.553, -353.553, 461.94, -191.342, 500, 0, 461.94, 191.342, 353.553, 353.553 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
@@ -32,7 +32,7 @@ font_data = ExtResource( 5 )
 radius = 75.0
 
 [sub_resource type="CircleShape2D" id=5]
-radius = 15.0
+radius = 100.0
 
 [node name="TouchScreen" type="CanvasLayer"]
 pause_mode = 2
@@ -66,7 +66,7 @@ margin_right = 150.0
 margin_bottom = 150.0
 
 [node name="0" type="TouchScreenButton" parent="Control/HBoxLeft/DPad/Buttons"]
-shape = SubResource( 7 )
+shape = SubResource( 11 )
 shape_centered = false
 action = "ui_right"
 script = ExtResource( 3 )

@@ -7,6 +7,7 @@ onready var keys := [$Control/HBoxRight/C, $Control/HBoxRight/X]
 onready var buttons := [$Control/HBoxRight/C/Control/Button, $Control/HBoxRight/X/Control/Button]
 
 onready var btns := $Control/HBoxLeft/DPad/Buttons.get_children()
+onready var actions := InputMap.get_actions()
 
 func _ready():
 	connect("visibility_changed", self, "vis")
@@ -29,8 +30,12 @@ func show_keys(arg_arrows := true, arg_c := true, arg_x := true, arg_pause := fa
 func set_game(arg := false):
 	var i = "" if arg else "ui_"
 	set_actions(i + "up", i + "down", i + "left", i + "right")
-	buttons[0].action = "action" if arg else "ui_cancel"
+	buttons[0].action = "grab" if arg else "ui_cancel"
 	buttons[1].action = "jump" if arg else "ui_accept"
+	
+	for a in actions:
+		Input.action_release(a)
+	
 	for f in buttons:
 		f.passby_press = arg
 
