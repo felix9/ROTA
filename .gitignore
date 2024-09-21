@@ -3,5 +3,6 @@
 
 # custom
 .import/
+[Aa]ndroid/
 [Ee]xport/*/
 [Ee]xport/_mac*

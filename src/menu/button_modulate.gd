@@ -1,9 +1,9 @@
 extends Node
 
-export var button_path : NodePath = ""
+export var button_path : NodePath = "."
 onready var button : TouchScreenButton = get_node_or_null(button_path)
 
-export var color_path : NodePath = ""
+export var color_path : NodePath = "."
 onready var color_node : CanvasItem = get_node_or_null(color_path)
 
 export var press_color := Color(1,0,1, 1.0)

@@ -179,7 +179,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_editor_description_": ""
 }
-button_path = NodePath(".")
 color_path = NodePath("../Poly")
 idle_color = Color( 1, 1, 1, 0.156863 )
 
@@ -226,7 +225,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_editor_description_": ""
 }
-button_path = NodePath(".")
 color_path = NodePath("../Poly")
 idle_color = Color( 1, 1, 1, 0.156863 )
 
@@ -278,7 +276,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_editor_description_": ""
 }
-button_path = NodePath(".")
 color_path = NodePath("../Poly")
 idle_color = Color( 1, 1, 1, 0.156863 )
 
