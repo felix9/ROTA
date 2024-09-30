@@ -23,7 +23,7 @@ corner_radius_bottom_left = 50
 
 [node name="PauseMenu" type="CanvasLayer"]
 pause_mode = 2
-layer = 5
+layer = 6
 script = ExtResource( 4 )
 items_path = NodePath("Control/List/Items")
 cursor_path = NodePath("Control/List/Cursor")

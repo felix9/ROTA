@@ -1,9 +1,9 @@
 extends Node2D
 
 onready var player = Shared.player
-onready var node_joy := $CanvasLayer/Cabinet/Controls/Joystick
-onready var node_a := $CanvasLayer/Cabinet/Controls/Button/Control/Node2D
-onready var node_b := $CanvasLayer/Cabinet/Controls/Button2/Control/Node2D
+onready var node_joy := $CanvasLayer/Center/Control/Cabinet/Controls/Joystick
+onready var node_a := $CanvasLayer/Center/Control/Cabinet/Controls/Button/Control/Node2D
+onready var node_b := $CanvasLayer/Center/Control/Cabinet/Controls/Button2/Control/Node2D
 
 var joy := Vector2.ZERO
 var btn_a := false

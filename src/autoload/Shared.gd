@@ -306,7 +306,7 @@ func change_scene():
 	speedrun_goal(csfn, map_name != "" and not "hub" in map_name)
 	
 	set_boundary()
-	TouchScreen.set_game(map_name != "")
+	TouchScreen.set_game(map_name != "" or is_arcade)
 	emit_signal("scene_changed")
 
 func set_boundary():
