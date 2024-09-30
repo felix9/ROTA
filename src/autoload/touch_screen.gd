@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+onready var control := $Control
 onready var right := $Control/HBoxRight
 onready var top := $Control/HBoxTop
 
@@ -52,3 +53,9 @@ func set_actions(_up, _down, _left, _right):
 	for i in 4:
 		btns[i].action = [_right, _down, _left, _up][i]
 		btns[i].passby_press = !("ui_" in _up)
+
+func margin(x := 20, y := 20):
+	control.margin_left = x
+	control.margin_right = -x
+	control.margin_top = y
+	control.margin_bottom = -y

@@ -8,6 +8,7 @@ func _ready():
 	cursor = clamp(int(Shared.get(var_name)), 0.0, list.size() - 1)
 	if is_frac: cursor = (cursor * list.size()) - 1
 	elif is_int: cursor = max(0, list.find(str(cursor)))
+	else: cursor = int(Shared.get(var_name))
 	set_label()
 
 func set_value():

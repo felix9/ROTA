@@ -247,7 +247,7 @@ custom_fonts/font = ExtResource( 2 )
 text = "Controller Setup"
 valign = 1
 
-[node name="Touch" type="Control" parent="Control/Menu/List" groups=["light", "shadow"]]
+[node name="Touch" type="Control" parent="Control/Menu/List"]
 margin_top = 440.0
 margin_right = 640.0
 margin_bottom = 510.0
@@ -256,6 +256,7 @@ script = ExtResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+is_refill = true
 var_name = "is_touch"
 
 [node name="Label" type="Label" parent="Control/Menu/List/Touch"]
@@ -276,23 +277,86 @@ custom_fonts/font = ExtResource( 2 )
 text = "< OFF >"
 align = 2
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Spacer2" type="Control" parent="Control/Menu/List" groups=["no_item"]]
+[node name="X" type="Control" parent="Control/Menu/List" groups=["touch"]]
 margin_top = 510.0
 margin_right = 640.0
-margin_bottom = 540.0
+margin_bottom = 580.0
+rect_min_size = Vector2( 0, 70 )
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+count = 1000
+step = 5
+var_name = "margin_x"
+
+[node name="Label" type="Label" parent="Control/Menu/List/X"]
+anchor_right = 0.5
+anchor_bottom = 1.0
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+text = "Margin X"
+valign = 1
+
+[node name="Label2" type="Label" parent="Control/Menu/List/X"]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+text = "< 2 >"
+align = 2
+valign = 1
+
+[node name="Y" type="Control" parent="Control/Menu/List" groups=["touch"]]
+margin_top = 580.0
+margin_right = 640.0
+margin_bottom = 650.0
+rect_min_size = Vector2( 0, 70 )
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+count = 1000
+step = 5
+var_name = "margin_y"
+
+[node name="Label" type="Label" parent="Control/Menu/List/Y"]
+anchor_right = 0.5
+anchor_bottom = 1.0
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+text = "Margin Y"
+valign = 1
+
+[node name="Label2" type="Label" parent="Control/Menu/List/Y"]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+text = "< 2 >"
+align = 2
+valign = 1
+
+[node name="Spacer2" type="Control" parent="Control/Menu/List" groups=["no_item"]]
+margin_top = 650.0
+margin_right = 640.0
+margin_bottom = 680.0
 rect_min_size = Vector2( 0, 30 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HeaderAudio" type="Control" parent="Control/Menu/List" groups=["no_item"]]
-margin_top = 540.0
+margin_top = 680.0
 margin_right = 640.0
-margin_bottom = 610.0
+margin_bottom = 750.0
 rect_min_size = Vector2( 0, 70 )
 
 [node name="Tex" type="TextureRect" parent="Control/Menu/List/HeaderAudio"]
@@ -319,9 +383,9 @@ __meta__ = {
 }
 
 [node name="Music" parent="Control/Menu/List" instance=ExtResource( 13 )]
-margin_top = 610.0
+margin_top = 750.0
 margin_right = 640.0
-margin_bottom = 680.0
+margin_bottom = 820.0
 rect_min_size = Vector2( 0, 70 )
 bus = 2
 
@@ -333,9 +397,9 @@ stream = ExtResource( 11 )
 bus = "Music"
 
 [node name="SFX" parent="Control/Menu/List" instance=ExtResource( 13 )]
-margin_top = 680.0
+margin_top = 820.0
 margin_right = 640.0
-margin_bottom = 750.0
+margin_bottom = 890.0
 rect_min_size = Vector2( 0, 70 )
 bus = 1
 
@@ -348,9 +412,9 @@ volume_db = -5.0
 bus = "SFX"
 
 [node name="Weather2" parent="Control/Menu/List" instance=ExtResource( 13 )]
-margin_top = 750.0
+margin_top = 890.0
 margin_right = 640.0
-margin_bottom = 820.0
+margin_bottom = 960.0
 rect_min_size = Vector2( 0, 70 )
 bus = 3
 
@@ -362,18 +426,18 @@ volume_db = -5.0
 bus = "SFX"
 
 [node name="Spacer" type="Control" parent="Control/Menu/List" groups=["no_item"]]
-margin_top = 820.0
+margin_top = 960.0
 margin_right = 640.0
-margin_bottom = 850.0
+margin_bottom = 990.0
 rect_min_size = Vector2( 0, 30 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HeaderVideo" type="Control" parent="Control/Menu/List" groups=["no_item"]]
-margin_top = 850.0
+margin_top = 990.0
 margin_right = 640.0
-margin_bottom = 920.0
+margin_bottom = 1060.0
 rect_min_size = Vector2( 0, 70 )
 
 [node name="Tex" type="TextureRect" parent="Control/Menu/List/HeaderVideo"]
@@ -397,9 +461,9 @@ __meta__ = {
 }
 
 [node name="Fullscreen" type="Control" parent="Control/Menu/List"]
-margin_top = 920.0
+margin_top = 1060.0
 margin_right = 640.0
-margin_bottom = 990.0
+margin_bottom = 1130.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 14 )
 __meta__ = {
@@ -427,9 +491,9 @@ align = 2
 valign = 1
 
 [node name="Borderless" type="Control" parent="Control/Menu/List" groups=["window"]]
-margin_top = 990.0
+margin_top = 1130.0
 margin_right = 640.0
-margin_bottom = 1060.0
+margin_bottom = 1200.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 19 )
 __meta__ = {
@@ -459,9 +523,9 @@ __meta__ = {
 }
 
 [node name="Resolution" type="Control" parent="Control/Menu/List" groups=["window"]]
-margin_top = 1060.0
+margin_top = 1200.0
 margin_right = 640.0
-margin_bottom = 1130.0
+margin_bottom = 1270.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 6 )
 __meta__ = {
@@ -488,9 +552,9 @@ align = 2
 valign = 1
 
 [node name="Mouse" type="Control" parent="Control/Menu/List" groups=["window"]]
-margin_top = 1130.0
+margin_top = 1270.0
 margin_right = 640.0
-margin_bottom = 1200.0
+margin_bottom = 1340.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 18 )
 __meta__ = {
@@ -520,9 +584,9 @@ __meta__ = {
 }
 
 [node name="Vsync" type="Control" parent="Control/Menu/List"]
-margin_top = 1200.0
+margin_top = 1340.0
 margin_right = 640.0
-margin_bottom = 1270.0
+margin_bottom = 1410.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 17 )
 __meta__ = {
@@ -552,9 +616,9 @@ __meta__ = {
 }
 
 [node name="Interpolate" type="Control" parent="Control/Menu/List"]
-margin_top = 1270.0
+margin_top = 1410.0
 margin_right = 640.0
-margin_bottom = 1340.0
+margin_bottom = 1480.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -585,9 +649,9 @@ __meta__ = {
 }
 
 [node name="TargetFPS" type="Control" parent="Control/Menu/List"]
-margin_top = 1340.0
+margin_top = 1480.0
 margin_right = 640.0
-margin_bottom = 1410.0
+margin_bottom = 1550.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -656,9 +720,9 @@ __meta__ = {
 }
 
 [node name="RadialBlur" type="Control" parent="Control/Menu/List"]
-margin_top = 1410.0
+margin_top = 1550.0
 margin_right = 640.0
-margin_bottom = 1480.0
+margin_bottom = 1620.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -690,9 +754,9 @@ __meta__ = {
 }
 
 [node name="Light" type="Control" parent="Control/Menu/List"]
-margin_top = 1480.0
+margin_top = 1620.0
 margin_right = 640.0
-margin_bottom = 1550.0
+margin_bottom = 1690.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -724,9 +788,9 @@ __meta__ = {
 }
 
 [node name="Shadows" type="Control" parent="Control/Menu/List" groups=["light"]]
-margin_top = 1550.0
+margin_top = 1690.0
 margin_right = 640.0
-margin_bottom = 1620.0
+margin_bottom = 1760.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -757,9 +821,9 @@ __meta__ = {
 }
 
 [node name="ShadowBuffer" type="Control" parent="Control/Menu/List" groups=["light", "shadow"]]
-margin_top = 1620.0
+margin_top = 1760.0
 margin_right = 640.0
-margin_bottom = 1690.0
+margin_bottom = 1830.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -791,9 +855,9 @@ __meta__ = {
 }
 
 [node name="Weather" type="Control" parent="Control/Menu/List" groups=["light", "shadow"]]
-margin_top = 1690.0
+margin_top = 1830.0
 margin_right = 640.0
-margin_bottom = 1760.0
+margin_bottom = 1900.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -824,18 +888,18 @@ __meta__ = {
 }
 
 [node name="Spacer4" type="Control" parent="Control/Menu/List" groups=["no_item"]]
-margin_top = 1760.0
+margin_top = 1900.0
 margin_right = 640.0
-margin_bottom = 1790.0
+margin_bottom = 1930.0
 rect_min_size = Vector2( 0, 30 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HeaderSpeed" type="Control" parent="Control/Menu/List" groups=["no_item"]]
-margin_top = 1790.0
+margin_top = 1930.0
 margin_right = 640.0
-margin_bottom = 1860.0
+margin_bottom = 2000.0
 rect_min_size = Vector2( 0, 70 )
 
 [node name="Tex" type="TextureRect" parent="Control/Menu/List/HeaderSpeed"]
@@ -856,9 +920,9 @@ text = "Speedrun"
 valign = 1
 
 [node name="Speedrun" type="Control" parent="Control/Menu/List"]
-margin_top = 1860.0
+margin_top = 2000.0
 margin_right = 640.0
-margin_bottom = 1930.0
+margin_bottom = 2070.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -893,9 +957,9 @@ __meta__ = {
 }
 
 [node name="Speedrun2" type="Control" parent="Control/Menu/List" groups=["speed"]]
-margin_top = 1930.0
+margin_top = 2070.0
 margin_right = 640.0
-margin_bottom = 2000.0
+margin_bottom = 2140.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {
@@ -927,9 +991,9 @@ align = 2
 valign = 1
 
 [node name="Decimals" type="Control" parent="Control/Menu/List" groups=["speed"]]
-margin_top = 2000.0
+margin_top = 2140.0
 margin_right = 640.0
-margin_bottom = 2070.0
+margin_bottom = 2210.0
 rect_min_size = Vector2( 0, 70 )
 script = ExtResource( 24 )
 __meta__ = {

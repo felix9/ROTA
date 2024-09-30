@@ -137,6 +137,9 @@ onready var arrow_mat : ShaderMaterial = $ArrowLayer/Arrow/Rect.material
 var arrow_track = null
 onready var chat := $ArrowLayer/Chat
 
+var margin_x = 20 setget set_margin_x
+var margin_y = 20 setget set_margin_y
+
 func _ready():
 	Wipe.connect("complete", self, "wipe_complete")
 	boundary_node.visible = false
@@ -490,6 +493,14 @@ func set_target_fps(arg := target_fps):
 	target_fps = abs(arg)
 	#print("target_fps: ", target_fps)
 	Engine.target_fps = target_fps
+
+func set_margin_x(arg := margin_x):
+	margin_x = abs(arg)
+	TouchScreen.margin(margin_x, margin_y)
+
+func set_margin_y(arg := margin_y):
+	margin_y = abs(arg)
+	TouchScreen.margin(margin_x, margin_y)
 
 ### Exit Game
 

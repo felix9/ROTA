@@ -12,6 +12,8 @@ var is_select := false
 export var is_refill := false
 export var is_ui_scene := false
 
+export var step := 1
+
 func _ready():
 	set_label()
 
@@ -39,6 +41,6 @@ func select(arg := is_select):
 	set_label()
 
 func axis_x(arg := 1):
-	self.cursor += arg
+	self.cursor += arg * step
 
 
