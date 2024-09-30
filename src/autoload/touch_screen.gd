@@ -6,6 +6,9 @@ onready var top := $Control/HBoxTop
 onready var keys := [$Control/HBoxRight/C, $Control/HBoxRight/X]
 onready var buttons := [$Control/HBoxRight/C/Control/Button, $Control/HBoxRight/X/Control/Button]
 
+onready var game_hide := [$Control/HBoxRight/C/Control/Key, $Control/HBoxRight/X/Control/Key]
+onready var game_show := [$Control/HBoxTop/Z, $Control/HBoxRight/C/Control/Sprite, $Control/HBoxRight/X/Control/Sprite]
+
 onready var btns := $Control/HBoxLeft/DPad/Buttons.get_children()
 onready var actions := InputMap.get_actions()
 
@@ -32,6 +35,11 @@ func set_game(arg := false):
 	set_actions(i + "up", i + "down", i + "left", i + "right")
 	buttons[0].action = "grab" if arg else "ui_cancel"
 	buttons[1].action = "jump" if arg else "ui_accept"
+	
+	for h in game_hide:
+		h.visible = !arg
+	for s in game_show:
+		s.visible = arg
 	
 	for a in actions:
 		Input.action_release(a)

@@ -1,12 +1,16 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/autoload/touch_screen.gd" type="Script" id=1]
+[ext_resource path="res://media/image/UI/magnify.png" type="Texture" id=2]
 [ext_resource path="res://src/menu/round_button.gd" type="Script" id=3]
 [ext_resource path="res://src/menu/button_modulate.gd" type="Script" id=4]
 [ext_resource path="res://media/font/mini-wakuwaku.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://media/image/UI/hand.png" type="Texture" id=6]
+[ext_resource path="res://src/shader/outline2D_outer.shader" type="Shader" id=7]
 [ext_resource path="res://src/class/shape/Circle.gd" type="Script" id=8]
+[ext_resource path="res://media/image/UI/boot.png" type="Texture" id=9]
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 7.07107, 7.07107, 9.2388, 3.82683, 10, 0, 9.2388, -3.82683, 7.07107, -7.07107, 353.553, -353.553, 461.94, -191.342, 500, 0, 461.94, 191.342, 353.553, 353.553 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
@@ -28,8 +32,18 @@ outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_bottom = -4
 font_data = ExtResource( 5 )
 
+[sub_resource type="ShaderMaterial" id=11]
+shader = ExtResource( 7 )
+shader_param/line_color = Color( 0, 0, 0, 1 )
+shader_param/line_thickness = 4.0
+
 [sub_resource type="CircleShape2D" id=4]
 radius = 75.0
+
+[sub_resource type="ShaderMaterial" id=12]
+shader = ExtResource( 7 )
+shader_param/line_color = Color( 0, 0, 0, 1 )
+shader_param/line_thickness = 4.0
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 100.0
@@ -66,7 +80,7 @@ margin_right = 150.0
 margin_bottom = 150.0
 
 [node name="0" type="TouchScreenButton" parent="Control/HBoxLeft/DPad/Buttons"]
-shape = SubResource( 11 )
+shape = SubResource( 7 )
 shape_centered = false
 action = "ui_right"
 script = ExtResource( 3 )
@@ -201,6 +215,11 @@ align = 1
 valign = 1
 uppercase = true
 
+[node name="Sprite" type="Sprite" parent="Control/HBoxRight/C/Control"]
+material = SubResource( 11 )
+scale = Vector2( -0.45, 0.45 )
+texture = ExtResource( 6 )
+
 [node name="X" type="CenterContainer" parent="Control/HBoxRight"]
 margin_left = 1090.0
 margin_top = 530.0
@@ -247,11 +266,67 @@ align = 1
 valign = 1
 uppercase = true
 
+[node name="Sprite" type="Sprite" parent="Control/HBoxRight/X/Control"]
+material = SubResource( 12 )
+scale = Vector2( -0.45, 0.45 )
+texture = ExtResource( 9 )
+
 [node name="HBoxTop" type="HBoxContainer" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = 0
 alignment = 2
+
+[node name="Z" type="CenterContainer" parent="Control/HBoxTop"]
+margin_left = 940.0
+margin_right = 1090.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+size_flags_vertical = 0
+
+[node name="Control" type="Control" parent="Control/HBoxTop/Z"]
+margin_left = 75.0
+margin_top = 75.0
+margin_right = 75.0
+margin_bottom = 75.0
+
+[node name="Button" type="TouchScreenButton" parent="Control/HBoxTop/Z/Control"]
+physics_interpolation_mode = 1
+modulate = Color( 1, 1, 1, 0.156863 )
+shape = SubResource( 3 )
+shape_centered = false
+action = "zoom"
+visibility_mode = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+color_path = NodePath("../Poly")
+idle_color = Color( 1, 1, 1, 0.156863 )
+
+[node name="Poly" type="Polygon2D" parent="Control/HBoxTop/Z/Control"]
+modulate = Color( 1, 1, 1, 0.156863 )
+polygon = PoolVector2Array( 70, 0, 64.6716, 26.7878, 49.4975, 49.4975, 26.7878, 64.6716, -3.0598e-06, 70, -26.7878, 64.6716, -49.4975, 49.4975, -64.6716, 26.7878, -70, -6.11959e-06, -64.6716, -26.7878, -49.4975, -49.4975, -26.7878, -64.6716, 8.34742e-07, -70, 26.7879, -64.6716, 49.4975, -49.4975, 64.6716, -26.7878 )
+script = ExtResource( 8 )
+is_baked = false
+radius = 70.0
+
+[node name="Sprite" type="Sprite" parent="Control/HBoxTop/Z/Control"]
+scale = Vector2( 0.419533, 0.419533 )
+texture = ExtResource( 2 )
+
+[node name="Key" type="Label" parent="Control/HBoxTop/Z/Control"]
+visible = false
+modulate = Color( 1, 0, 0.301961, 1 )
+margin_left = -75.0
+margin_top = -75.0
+margin_right = 75.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 6 )
+text = "c"
+align = 1
+valign = 1
+uppercase = true
 
 [node name="Pause" type="CenterContainer" parent="Control/HBoxTop"]
 margin_left = 1090.0
