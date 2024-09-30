@@ -99,6 +99,7 @@ var player
 var door_in
 var goal
 var is_arcade := false
+var is_title := false
 
 var save_slot := -1
 var save_dict := {0: {}, 1: {}, 2: {}}
@@ -282,6 +283,7 @@ func change_scene():
 		csfn = next_scene
 		map_name = csfn.right(worlds_path.length()).replace(".tscn", "") if csfn.begins_with(worlds_path) else ""
 		is_arcade = "arcade" in csfn
+		is_title = csfn == title_path
 		get_tree().change_scene(next_scene)
 		Cam.reset_zoom()
 	

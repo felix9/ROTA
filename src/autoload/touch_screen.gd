@@ -6,8 +6,10 @@ onready var top := $Control/HBoxTop
 onready var keys := [$Control/HBoxRight/C, $Control/HBoxRight/X]
 onready var buttons := [$Control/HBoxRight/C/Control/Button, $Control/HBoxRight/X/Control/Button]
 
+onready var key_z := $Control/HBoxTop/Z
+onready var pause := $Control/HBoxTop/Pause
 onready var game_hide := [$Control/HBoxRight/C/Control/Key, $Control/HBoxRight/X/Control/Key]
-onready var game_show := [$Control/HBoxTop/Z, $Control/HBoxRight/C/Control/Sprite, $Control/HBoxRight/X/Control/Sprite]
+onready var game_show := [key_z, $Control/HBoxRight/C/Control/Sprite, $Control/HBoxRight/X/Control/Sprite]
 
 onready var btns := $Control/HBoxLeft/DPad/Buttons.get_children()
 onready var actions := InputMap.get_actions()
@@ -35,6 +37,10 @@ func set_game(arg := false):
 		h.visible = !arg
 	for s in game_show:
 		s.visible = arg
+	
+	if Shared.is_arcade:
+		key_z.visible = false
+	pause.visible = !Shared.is_title
 	
 	for a in actions:
 		Input.action_release(a)
