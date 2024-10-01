@@ -1,7 +1,9 @@
 # ![icon](media/image/icon/icon48.png) ROTA
 Made with Godot 3.6 / Gravity Bending Puzzle Platformer 
 
-Play now on [Steam](https://store.steampowered.com/app/1993830/ROTA/) or [itch.io](https://harmonyhoney.itch.io/rota) ! (:
+Available for Linux, Windows, Mac, Web & Android !
+
+Play now on [Steam](https://store.steampowered.com/app/1993830/ROTA/) or [itch.io](https://harmonyhoney.itch.io/rota) (:
 
 ![main_capsule](media/image/assets/main_capsule.png)
 
@@ -24,4 +26,5 @@ Using [Godot-Steam-API](https://github.com/samsface/godot-steam-api) by [samsfac
 ![shot8](media/image/assets/screens/thumb/8.png)
 ![shot9](media/image/assets/screens/thumb/9.png)
 ![shot10](media/image/assets/screens/thumb/10.png)
+![shot11](media/image/assets/screens/thumb/11.png)
 
