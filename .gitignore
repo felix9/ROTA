@@ -2,6 +2,7 @@
 *.translation
 
 # custom
+.flatpak-builder/
 .import/
 [Aa]ndroid/
 [Ee]xport/*/
