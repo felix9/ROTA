@@ -52,6 +52,6 @@ jobs:
       - name: Upload to release
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: >-
+        run: |
           tar -cJf ${{ env.EXPORT_NAME }}.tar.xz ${{ env.EXPORT_NAME }}.pck
           gh release upload '${{ github.ref_name }}' ${{ env.EXPORT_NAME }}.tar.xz --repo '${{ github.repository }}'
