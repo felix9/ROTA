@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <name>ROTA</name>
+  <summary>Gravity bends beneath your feet</summary>
+  <branding>
+    <color type="primary" scheme_preference="light">#ff99ff</color>
+    <color type="primary" scheme_preference="dark">#850087</color>
+  </branding>
+  <developer_name translatable="no">HHoney Software</developer_name>
+  <developer id="net.hhoney">
+    <name translatable="no">HHoney Software</name>
+  </developer>
+  <description>
+    <p>Move blocks and twist gravity to solve puzzles. Collect all 50 gems and explore 8 vibrant worlds.</p>
+    <ul>
+      <li>Rotate gravity as you walk over the edge!</li>
+      <li>Push, pull and rotate gravity-blocks to traverse the stage and solve puzzles.</li>
+      <li>Collect all 50 gems to unlock doors and explore 8 vibrant worlds!</li>
+      <li>Listen to an original ambient soundtrack that will keep you relaxed while solving challenging puzzles. (:</li>
+      <li>Watch out for spikes! 0:</li>
+    </ul>
+  </description>
+  <id>net.hhoney.rota</id>
+  <launchable type="desktop-id">net.hhoney.rota.desktop</launchable>
+  <metadata_license>CC0</metadata_license>
+  <project_license>Unlicense</project_license>
+  <content_rating type="oars-1.1"></content_rating>
+  <url type="homepage">https://hhoney.net</url>
+  <url type="bugtracker">https://github.com/HarmonyHoney/ROTA/issues</url>
+  <url type="donation">https://ko-fi.com/hhoney</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/4.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/5.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/6.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/7.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/8.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/9.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/HarmonyHoney/ROTA/6c7dafea0993700258f77a2412eef7fca5fa559c/media/image/assets/screens/10.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="0.0.0" date="2024-12-03" />
+  </releases>
+</component>
