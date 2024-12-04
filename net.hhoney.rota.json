@@ -18,9 +18,9 @@
       "buildsystem": "simple",
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/cassidyjames/ROTA/releases/download/0.0.9/rota-linux.zip",
-          "sha256": "76efd671794eab4f0f1459b7e8a31f871f758e5ee78fa312284a237c7dc3542b"
+          "type": "file",
+          "url": "https://github.com/cassidyjames/ROTA/releases/download/0.0.10/rota-linux.pck",
+          "sha256": "603fc222d6b163cc332c0e1273c4f9b063236782ccef8dfcf0f8dc3aeaf1bb8d"
         },
         {
           "type": "dir",
