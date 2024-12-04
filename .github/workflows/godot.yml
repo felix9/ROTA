@@ -54,4 +54,4 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           tar -cJf ${{ env.EXPORT_NAME }}.tar.xz ${{ env.EXPORT_NAME }}.pck
-          gh release upload '${{ github.ref_name }}' ${{ env.EXPORT_NAME }}.tar.xz --repo '${{ github.repository }}'
+          gh release upload '${{ github.ref_name }}' * --repo '${{ github.repository }}'
