@@ -613,7 +613,7 @@ margin_bottom = -15.0
 size_flags_horizontal = 4
 size_flags_vertical = 5
 custom_fonts/font = ExtResource( 21 )
-text = "Patch 6"
+text = "Patch 2024-12-6"
 align = 1
 valign = 2
 
@@ -627,9 +627,9 @@ custom_constants/separation = 0
 alignment = 1
 
 [node name="Prefix" type="Label" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 24.0
+margin_top = 22.0
 margin_right = 512.0
-margin_bottom = 55.0
+margin_bottom = 53.0
 custom_fonts/font = SubResource( 6 )
 text = "   a game by"
 valign = 1
@@ -653,9 +653,9 @@ __meta__ = {
 }
 
 [node name="Control" type="Control" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 55.0
+margin_top = 53.0
 margin_right = 512.0
-margin_bottom = 205.0
+margin_bottom = 203.0
 rect_min_size = Vector2( 0, 150 )
 
 [node name="TextureRect" type="TextureRect" parent="Canvas/CenterContainer/Control/Credits/List/Control"]
@@ -667,24 +667,24 @@ expand = true
 stretch_mode = 6
 
 [node name="Suffix" type="Label" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 205.0
+margin_top = 203.0
 margin_right = 512.0
-margin_bottom = 236.0
+margin_bottom = 234.0
 custom_fonts/font = SubResource( 6 )
 text = "hhoney.net   "
 align = 2
 valign = 1
 
 [node name="Spacer" type="Control" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 236.0
+margin_top = 234.0
 margin_right = 512.0
-margin_bottom = 256.0
-rect_min_size = Vector2( 0, 20 )
+margin_bottom = 244.0
+rect_min_size = Vector2( 0, 10 )
 
 [node name="Prefix2" type="Label" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 256.0
+margin_top = 244.0
 margin_right = 512.0
-margin_bottom = 287.0
+margin_bottom = 275.0
 custom_fonts/font = SubResource( 6 )
 text = "   made with"
 valign = 1
@@ -693,9 +693,9 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 287.0
+margin_top = 275.0
 margin_right = 512.0
-margin_bottom = 437.0
+margin_bottom = 425.0
 rect_min_size = Vector2( 0, 150 )
 texture = ExtResource( 23 )
 expand = true
@@ -717,24 +717,24 @@ __meta__ = {
 }
 
 [node name="Suffix2" type="Label" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 437.0
+margin_top = 425.0
 margin_right = 512.0
-margin_bottom = 468.0
+margin_bottom = 456.0
 custom_fonts/font = SubResource( 6 )
 text = "godotengine.org   "
 align = 2
 valign = 1
 
 [node name="Spacer2" type="Control" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 468.0
+margin_top = 456.0
 margin_right = 512.0
-margin_bottom = 498.0
-rect_min_size = Vector2( 0, 30 )
+margin_bottom = 466.0
+rect_min_size = Vector2( 0, 10 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 498.0
+margin_top = 466.0
 margin_right = 512.0
-margin_bottom = 548.0
+margin_bottom = 516.0
 custom_constants/separation = 10
 alignment = 1
 
@@ -771,30 +771,31 @@ texture = ExtResource( 27 )
 expand = true
 
 [node name="Spacer3" type="Control" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 548.0
+margin_top = 516.0
 margin_right = 512.0
-margin_bottom = 558.0
+margin_bottom = 526.0
 rect_min_size = Vector2( 0, 10 )
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Canvas/CenterContainer/Control/Credits/List"]
-margin_top = 558.0
+margin_top = 526.0
 margin_right = 512.0
-margin_bottom = 659.0
+margin_bottom = 662.0
 
 [node name="Label4" type="Label" parent="Canvas/CenterContainer/Control/Credits/List/HFlowContainer"]
-margin_left = 23.0
-margin_right = 271.0
+margin_left = 68.0
+margin_right = 444.0
 margin_bottom = 31.0
 size_flags_horizontal = 6
 custom_fonts/font = SubResource( 6 )
-text = "Harmony Honey"
+text = "Harmony Honey Monroe"
 align = 1
 valign = 1
 
 [node name="Label8" type="Label" parent="Canvas/CenterContainer/Control/Credits/List/HFlowContainer"]
-margin_left = 321.0
-margin_right = 489.0
-margin_bottom = 31.0
+margin_left = 37.0
+margin_top = 35.0
+margin_right = 205.0
+margin_bottom = 66.0
 size_flags_horizontal = 6
 custom_fonts/font = SubResource( 6 )
 text = "Guy Unger"
@@ -802,9 +803,9 @@ align = 1
 valign = 1
 
 [node name="Label6" type="Label" parent="Canvas/CenterContainer/Control/Credits/List/HFlowContainer"]
-margin_left = 20.0
+margin_left = 284.0
 margin_top = 35.0
-margin_right = 210.0
+margin_right = 474.0
 margin_bottom = 66.0
 size_flags_horizontal = 6
 custom_fonts/font = SubResource( 6 )
@@ -813,10 +814,10 @@ align = 1
 valign = 1
 
 [node name="Label5" type="Label" parent="Canvas/CenterContainer/Control/Credits/List/HFlowContainer"]
-margin_left = 255.0
-margin_top = 35.0
-margin_right = 491.0
-margin_bottom = 66.0
+margin_left = 31.0
+margin_top = 70.0
+margin_right = 267.0
+margin_bottom = 101.0
 size_flags_horizontal = 6
 custom_fonts/font = SubResource( 6 )
 text = "Raffaele Picca"
@@ -824,9 +825,9 @@ align = 1
 valign = 1
 
 [node name="Label7" type="Label" parent="Canvas/CenterContainer/Control/Credits/List/HFlowContainer"]
-margin_left = 32.0
+margin_left = 334.0
 margin_top = 70.0
-margin_right = 178.0
+margin_right = 480.0
 margin_bottom = 101.0
 size_flags_horizontal = 6
 custom_fonts/font = SubResource( 6 )
@@ -835,13 +836,13 @@ align = 1
 valign = 1
 
 [node name="Label9" type="Label" parent="Canvas/CenterContainer/Control/Credits/List/HFlowContainer"]
-margin_left = 246.0
-margin_top = 70.0
-margin_right = 479.0
-margin_bottom = 101.0
+margin_left = 85.0
+margin_top = 105.0
+margin_right = 426.0
+margin_bottom = 136.0
 size_flags_horizontal = 6
 custom_fonts/font = SubResource( 6 )
-text = "Cassidy Blaede"
+text = "Cassidy James Blaede"
 align = 1
 valign = 1
 
