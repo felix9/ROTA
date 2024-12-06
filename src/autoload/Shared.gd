@@ -706,6 +706,7 @@ func save_options():
 	o["clock_show"] = int(clock_show)
 	o["clock_alpha"] = float(clock_alpha)
 	o["clock_decimals"] = int(clock_decimals)
+	o["is_touch"] = int(is_touch)
 	
 	file_save_json("user://options.json", o)
 	
@@ -752,6 +753,8 @@ func load_options():
 		clock_alpha = float(d["clock_alpha"])
 	if d.has("clock_decimals"):
 		clock_decimals = int(d["clock_decimals"])
+	if d.has("is_touch"):
+		is_touch = bool(d["is_touch"])
 
 func save_keys(path := "user://keys.tres"):
 	var s_keys = SaveDict.new()
