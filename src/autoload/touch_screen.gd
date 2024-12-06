@@ -16,11 +16,11 @@ onready var btns := $Control/HBoxLeft/DPad/Buttons.get_children()
 onready var actions := InputMap.get_actions()
 
 func _ready():
-	set_game(true)
+	set_game(false)
 	visible = false
 	
 	yield(Shared, "scene_changed")
-	visible = (OS.has_touchscreen_ui_hint() and OS.get_name() == "HTML5") or OS.get_name() == "Android"
+	visible = Shared.is_touch or ((OS.has_touchscreen_ui_hint() and OS.get_name() == "HTML5") or OS.get_name() == "Android")
 
 func show_keys(arg_arrows := true, arg_c := true, arg_x := true, arg_pause := false, arg_passby := false):
 	right.visible = arg_arrows
