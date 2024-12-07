@@ -84,7 +84,7 @@ hairstyle_back = 0
 hairstyle_front = 0
 hat = 1
 is_npc = true
-lines = [ "They call me Candle Randall!", "It's always handy having a light", "Feel the delight of candle light!", "I'm not afraid of the dark! I swear...", "Candle candle candle candle...", "I've been trying to open that big door!", "I get a lil spooked without my candy", "Need a light?" ]
+lines = [ "They call me Candle Randall!", "It's always handy having a light", "Feel the delight of candle light!", "I'm not afraid of the dark! I swear...", "Candle candle candle candle...", "I've been trying to open that big door!", "I get a lil spooked without my candle", "Need a light?" ]
 greeting = 0
 chat_offset = Vector2( 0, -160 )
 
